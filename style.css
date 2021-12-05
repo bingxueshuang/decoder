@@ -1,0 +1,95 @@
+.simulation {
+  display: flex;
+}
+label.switch {
+  --len: 40px;
+  width: var(--len);
+  height: calc(var(--len) / 2);
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+.input label.switch {
+  transform: translate(0, -50%);
+}
+.saf label.switch {
+  transform: translate(0, -100%);
+}
+
+label.switch > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+label.switch > input {
+  display:none;
+  visibility: hidden;
+}
+
+label.switch > span:before, label.switch > span:after {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+}
+
+label.switch > span:before {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-radius: calc(var(--len) / 2);
+  transition: background-color .2s;
+}
+.saf label.switch > span:before {
+  height: 30%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+label.switch > span:after{
+  top: 50%;
+  z-index: 3;
+  transition: transform .2s linear;
+  width: calc(var(--len) * 3 / 5);
+  height: calc(var(--len) * 3 / 5);
+  transform: translate(0, -50%);
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.saf label.switch > span:after {
+  width: calc(var(--len) / 2);
+  height: calc(var(--len) / 2)
+}
+
+label.switch > input:checked ~ span:before {
+  background-color: #fa5;
+}
+
+label.switch > input:checked ~ span:after {
+  transform: translate(100%, -50%);
+}
+label.switch.x {
+  top: 45px;
+}
+label.switch.x > span:after {
+  background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='8' y='15'%3e x %3c/text%3e%3c/svg%3e");
+}
+label.switch.y {
+  top: 105px;
+}
+label.switch.y > span:after {
+  background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='8' y='15'%3e y %3c/text%3e%3c/svg%3e");
+}
+label.switch.z {
+  top: 165px;
+}
+label.switch.z > span:after {
+  background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='8' y='15'%3e z %3c/text%3e%3c/svg%3e");
+}label.switch.w {
+  top: 255px;
+}
+label.switch.w > span:after {
+  background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='8' y='15'%3e w %3c/text%3e%3c/svg%3e");
+}
