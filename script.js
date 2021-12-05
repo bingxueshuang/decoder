@@ -10,7 +10,11 @@ function evaluate(){
     ans = ans + pow*e;
     pow = pow * 2;
   })
-  document.querySelector(".output p").innerHTML = "D"+ans;
+  Dlist = document.querySelectorAll("span.bulb");
+  Dlist.forEach(function(e){
+    e.classList.remove("glow");
+  })
+  Dlist[ans].classList.add("glow");
 }
 document.querySelectorAll('input').forEach(function(e){
 	e.addEventListener("change", evaluate);

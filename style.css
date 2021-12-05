@@ -93,3 +93,18 @@ label.switch.z > span:after {
 label.switch.w > span:after {
   background-image: url("data:image/svg+xml, %3csvg xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='8' y='15'%3e w %3c/text%3e%3c/svg%3e");
 }
+span.bulb {
+  content: url("bulb_off.svg");
+  height: 27px;
+  width: 22px;
+}
+span.bulb.glow {
+  content: url("bulb_on.svg")
+}
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  vertical-align: center;
+}
