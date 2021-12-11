@@ -1,0 +1,24 @@
+<html>
+<head><title>x fault</title></head>
+<body>
+<h4>SA0 fault on x input wire</h4>
+Let us consider the case of a SA0 fault at the position shown below.<br>
+<p align = "center"><img src= "images/x_1.png" width = 40%></p>
+<p>When this happens, the value of x is always changed to zero regardless of which decoder is activated. Therefore, the output lines that require x to be 1 will never be high, instead the output line corresponding to the same input with x = 0 will be high. For instance, if we give 1100 as the input, output line D12 should be high in case of normal operation. Since we have a SA0 fault, output line corresponding to 1000 (D8) will be high instead. </p>
+The expected as well as obtained truth table are given below: <br><br>
+<img src = "images/x_fault1.png" width = 100%><br><br><br>
+Now consider the case of a SA0 fault at a slightly different position.<br>
+<p align = "center"><img src = "images/x_2.png" width = 40%></p>
+<p>Now, the effects of the fault are visible only when the first decoder is active. If an input activates the second decoder instead, the output is as expected. 
+When the first decoder is active, the value of x will be changed to 0 regardless of the provided input. Once again, the output lines that require x to be 1 will not be high, instead the output line corresponding to the same input with x = 0 will be high. For example, if we provide 0101 as the input, the output line corresponding to 0001 (D1) will be high. </p>
+The truth tables for this case are given below:<br><br>
+<img src = "images/x_fault2.png" width = 100%><br><br><br>
+Finally, let us consider the SA0 fault to be at the following position.<br>
+<p align = "center"><img src = "images/x_3.png" width = 40%></p>
+<p>This case, in a sense, is the opposite of the previous case. If the input activates the first decoder, the output is as expected. The fault only affects the inputs activating the second decoder.</p>
+<p>When the second decoder is active, the value of x will be changed to 0 because of the fault. The output lines that require x to be 1 will never be high, since x will be converted to 0. For example, if the input is 1111(D15), the output line for 1011(D11) will be high.</p>
+The truth tables for this case are given below:<br><br>
+<img src = "images/x_fault3.png" width = 100%><br><br><br>
+SA0 fault on y or z wires will lead to similar cases, with some outputs always being low and other outputs being high for multiple inputs.
+</body>
+</html>
