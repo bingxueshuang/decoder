@@ -1,7 +1,48 @@
 <html>
-<head><title>x fault</title></head>
+<head>
+<title>TITLE</title>
+</head>
 <body>
-<h4>1. SA0 fault on x input wire</h4>
+
+<h1><B><U>AIM</U></B></h1>
+<p>Detection of the Stuck-at-0 faults on the 4x16 decoder constructed with two 3x8 decoders.
+</p>
+<center><img src="images/question.png" " width="600" height="300"></center>
+
+<h1><B><U>THEORY</U></B></h1>
+<font size="5"><U>Stuck-at-fault</U></font>
+<p>A Stuck-at fault (SAF) is a logic-level fault that mimics a manufacturing defect on a digital device, circuits, etc. A Stuck-at-Fault is of two types:
+stuck-at-0 (SA0) and stuck-at-1 (SA1) fault. Stuck at faults occur when a line is permanently stuck to Vcc or ground giving a faulty output. This line may 
+be an input or output to any gate. Also this fault can be single or multiple stuck at faults, Although in this experiment we will only talk about single stuck 
+at faults. 
+<br>example of stuck-at-0  :-
+<br>
+<center><img src="images/image_1.png" " width="300" height="200"></center>
+<br>example of stuck-at-1  :-
+<br>
+<center><img src="images/image_2.png" " width="350" height="300"></center>
+<br>A fault model is an engineering model of something that could go wrong in the construction
+or operation of a piece of equipment.
+From the model, the designer or user can then predict the consequences of this particular fault.
+To detect such fault, a suitable fault model is used.The user deliberately make Vcc or grounded positions and checks output. The user checks all types
+of faults that may occur in the circuit.
+<br>
+<br>
+<font size="5"><U> 4-to-16 line Decoder using 3-to-8 line decoder</U></font>
+<p>
+The parallel inputs x, y & z are applied to each 3 to 8 decoder. The complement of input, w is connected to Enable, E of upper 3 to 8 decoder in order
+to get the outputs, D0 to D7. These are the first eight minterms. The input, w is directly connected to Enable, E of lower 3 to 8 decoder in order to get 
+the outputs, D8 to D15. These are the last eight minterms.</p>
+<br>
+<center><img src="images/image_3.png" " width="400" height="300"></center>
+<p>when the w is at logic '0' the above decoder is turned on and gives output (D0 to D7), and when w is at logic '1' the below decoder is turned on and gives output
+(D8 to D15).The truth table of the 4 to 16 decoder is as follows :-</p>
+<center><img src="images/image_4.png" " width="700" height="400"></center>
+<br>
+
+<h1><B><U>Procedure</U></B></h1>
+
+<h3>1. SA0 fault on x input wire</h3>
 Let us consider the case of a SA0 fault at the position shown below.<br>
 <p align = "center"><img src= "images/x_1.png" width = 40%></p>
 <p>When this happens, the value of x is always changed to zero regardless of which decoder is activated. Therefore, the output lines that require x to be 1 will never be high, instead the output line corresponding to the same input with x = 0 will be high. For instance, if we give 1100 as the input, output line D12 should be high in case of normal operation. Since we have a SA0 fault, output line corresponding to 1000 (D8) will be high instead. </p>
@@ -20,5 +61,7 @@ Finally, let us consider the SA0 fault to be at the following position.<br>
 The truth tables for this case are given below:<br><br>
 <img src = "images/x_fault3.png" width = 100%><br><br><br>
 SA0 fault on y or z wires will lead to similar cases, with some outputs always being low and other outputs being high for multiple inputs.
+
+
 </body>
 </html>
