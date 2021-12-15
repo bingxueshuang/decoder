@@ -4,9 +4,24 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Layout</title>
+	<title>Simulation</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js" defer></script>
+	<style type="text/css">
+		div {
+			position: relative;
+		}
+		div.simulation a {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			opacity: 0;
+			transition: opacity 0.2s;
+		}
+		div.simulation:hover a {
+			opacity: 1;
+		}
+	</style>
 </head>
 <body>
 	<div class="top-bar">
@@ -26,25 +41,18 @@
 					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
 					<li><a href="fault_output.html">Fault on Output Line</a></li>
 					<li><a href="procedure.html">Procedure for Simulation</a></li>
-					<li><a href="simulation.html">Simulation</a></li>
+					<li class="active"><a href="simulation.html">Simulation</a></li>
 					<li><a href="group.html">Group Information</a></li>
 					<li><a href="refs.html">References</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="content">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<p>Below is the simulation for stuck at fault in 4x16 decoder. Check the <a href="procedure.html">procedure</a> about how to use simulator. Click the <a href="sim/sim.htm" target="_blank">link to open in a new tab.</a></p>
+			<div class="simulation">
+				<a href="sim/sim.htm" target="_blank"><img src="sim/link.svg" height="40" width="40" /></a>
+				<iframe src="sim/sim.htm" title="Simulation" style="width: 100%; height: 600px;"></iframe>
+			</div>
 		</div>
 	</div>
 </body>

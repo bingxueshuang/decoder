@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fault on x line</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+	</div>
+	<div style="position:relative;top:10vh;width:100%;height:100%;">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div style="width:100%;padding:10px;" onclick="modalClose();">
+				<span class="close-btn">&times;</span>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="aim.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li class="active"><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
+					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
+					<li><a href="fault_output.html">Fault on Output Line</a></li>
+					<li><a href="procedure.html">Procedure for Simulation</a></li>
+					<li><a href="simulation.html">Simulation</a></li>
+					<li><a href="group.html">Group Information</a></li>
+					<li><a href="refs.html">References</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h2>SA0 fault on x input wire</h2>
+			<p>Please note: SA0 faults on y and z wires will lead to similar cases, with some outputs always being low and other inputs as provided</p>
+			<h3>Case (i)</h3>
+			<p>Consider the case of SA0 fault at the position shown below</p>
+			<p><img src="images/x_1.png" /></p>
+			<p>When this happens, the value of x is always changed to zero regardless of which decoder is activated. Therefore, the output lines that require x to be 1 will never be high, instead the output line corresponding to the same input with x = 0 will be high. For instance, if we give 1100 as the input, output line D12 should be high in case of normal operation. Since we have a SA0 fault, output line corresponding to 1000 (D8) will be high instead.</p>
+			<p>The expected as well as faulty values are listed in the table below:</p>
+			<p><img src="images/x_fault1.png" /></p>
+			<h3>Case (ii)</h3>
+			<p>Now consider the case of SA0 at a slightly different position:</p>
+			<p><img src="images/x_2.png"></p>
+			<p>Now, the effects of the fault are visible only when the first decoder is active. If an input activates the second decoder instead, the output is as expected. When the first decoder is active, the value of x will be changed to 0 regardless of the provided input. Once again, the output lines that require x to be 1 will not be high, instead the output line corresponding to the same input with x = 0 will be high. For example, if we provide 0101 as the input, the output line corresponding to 0001 (D1) will be high.</p>
+			<p>The truth tables for this case are given below:</p>
+			<p><img src="images/x_fault2.png" /></p>
+			<h3>Case (iii)</h3>
+			<p>Finally consider SA0 fault at the following location:</p>
+			<p><img src="images/x_3.png" /></p>
+			<p>This case, in a sense, is the opposite of the previous case. If the input activates the first decoder, the output is as expected. The fault only affects the inputs activating the second decoder.</p>
+			<p>When the second decoder is active, the value of x will be changed to 0 because of the fault. The output lines that require x to be 1 will never be high, since x will be converted to 0. For example, if the input is 1111(D15), the output line for 1011(D11) will be high.</p>
+			<p>Truth table is given below:</p>
+			<p><img src="images/x_fault3.png" /></p>
+		</div>
+	</div>
+</body>
+</html>
