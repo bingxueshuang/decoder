@@ -5,9 +5,9 @@
 <body>
 
 <h1><B><U>AIM</U></B></h1>
-<p><font size="4">Detection of the Stuck-at-0 faults on the 4x16 decoder constructed with two 3x8 decoders.</font>
+<p><font size="4">Detection of the Stuck-at-0 faults (SA0) on the 4x16 decoder constructed with two 3x8 decoders as shown in the image.</font>
 </p>
-<center><img src="images/question.png" " width="600" height="300"></center>
+<center><img src="images/question.png" width="600" height="300"></center>
 
 <h1><B><U>THEORY</U></B></h1>
 <font size="5"><U>Stuck-at-fault</U></font>
@@ -17,10 +17,10 @@ be an input or output to any gate. Also this fault can be single or multiple stu
 at faults. </font>
 <br>example of stuck-at-0  :-
 <br>
-<center><img src="images/image_1.png" " width="300" height="200"></center>
+<center><img src="images/image_1.png" width="300" height="200"></center>
 <br>example of stuck-at-1  :-
 <br>
-<center><img src="images/image_2.png" " width="350" height="300"></center>
+<center><img src="images/image_2.png" width="350" height="300"></center>
 <br><font size="4">A fault model is an engineering model of something that could go wrong in the construction
 or operation of a piece of equipment.
 From the model, the designer or user can then predict the consequences of this particular fault.
@@ -34,10 +34,10 @@ The parallel inputs x, y & z are applied to each 3 to 8 decoder. The complement 
 to get the outputs, D0 to D7. These are the first eight minterms. The input, w is directly connected to Enable, E of lower 3 to 8 decoder in order to get 
 the outputs, D8 to D15. These are the last eight minterms.</font></p>
 <br>
-<center><img src="images/image_3.png" " width="400" height="300"></center>
+<center><img src="images/image_3.png" width="400" height="300"></center>
 <p><font size="4">when the w is at logic '0' the above decoder is turned on and gives output (D0 to D7), and when w is at logic '1' the below decoder is turned on and gives output
 (D8 to D15).The truth table of the 4 to 16 decoder is as follows :-</font></p>
-<center><img src="images/image_4.png" " width="700" height="400"></center>
+<center><img src="images/image_4.png" width="700" height="400"></center>
 <br>
 
 <h1><B><U>Procedure</U></B></h1>
@@ -60,25 +60,25 @@ Finally, let us consider the SA0 fault to be at the following position.<br>
 <p><font size="4">When the second decoder is active, the value of x will be changed to 0 because of the fault. The output lines that require x to be 1 will never be high, since x will be converted to 0. For example, if the input is 1111(D15), the output line for 1011(D11) will be high.</font></p>
 The truth tables for this case are given below:<br><br>
 <img src = "images/x_fault3.png" width = 100%><br><br><br>
-<U><B><>Note</B></U> :- <font size="4">SA0 fault on y or z wires will lead to similar cases, with some outputs always being low and other outputs being high for multiple inputs.</font>
+<U><B>Note</B></U> :- <font size="4">SA0 fault on y or z wires will lead to similar cases, with some outputs always being low and other outputs being high for multiple inputs.</font>
 
 <h3>2. SA0 fault on w input wire</h3>
 
 <h4>Case 1 :- When SA0 fault is at the position shown in the figure.</h4>
-<center><img src="images/w_fault1.png" " width="40%"></center>
+<center><img src="images/w_fault1.png" width="40%"></center>
 <br><br>
 <font size="4">In this case the value of 'w' will always be at logic '0' regardless of it's input values.Therefore, the above decoder(D0 to D7) will always be activated
 and the below decoder(D8 to D15) will always be deactivated.So, at the time when we expect output from below decoder (w input value is at logic high) we will see
 abnormalities in our circuit.We will see the repetion of the output pattern of above decoder.For instance, say the input is 0001 so the expected output and the 
 output obtained both will be same i.e. D1,but if the input is 1001 so the expected output is D9 but the obtained output will be D1.</font>
 <br>The truth table of this faulty circuit with expected and obtained outputs is shown below:-
-<center><img src="images/w_fault1table.png" " width="100%"></center>
+<center><img src="images/w_fault1table.png" width="100%"></center>
 <br><br>
 Here w is the actual input value and wf (faulty value) represents the value of w changed due to the fault present in the circuit.
 <br>
 <br>
 <h4>Case 2 :- When SA0 fault is at the position shown in the figure. </h4>
-<center><img src="images/w_fault2.png" " width="40%"></center>
+<center><img src="images/w_fault2.png" width="40%"></center>
 <br><br>
 <font size="4">In this case the SA0 fault in the circuit will be experienced only by the below decoder. For the above decoder the the value of 'w' will be same as the input.
 But for the below decoder due to the SA0 fault present the value of 'w' will always be at logic '0' regardless of the input value of 'w'.As 'w' is an enable for below 
@@ -87,7 +87,7 @@ circuit, As at that time the above decoder is also deactivated.
 For instance, say the input is 0010 so the output obtained both will be same as expected output i.e. D2,but if the input is 1001 so the expected output is D9 but
 no output will be obtained in this case, as both of the decoders are deactivated.</font>
 <br>The truth table of this faulty circuit with expected and obtained outputs is shown below:-
-<center><img src="images/w_fault2table.png" " width="100%"></center>
+<center><img src="images/w_fault2table.png" width="100%"></center>
 <br><br>
 Here w is the actual input value and wf (faulty value) represents the changed value of w experienced only by below decoder.
 
