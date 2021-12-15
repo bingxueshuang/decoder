@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Theory</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+	</div>
+	<div style="position:relative;top:10vh;width:100%;height:100%;">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div style="width:100%;padding:10px;" onclick="modalClose();">
+				<span class="close-btn">&times;</span>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="aim.html">Aim</a></li>
+					<li class="active"><a href="theory.html">Theory</a></li>
+					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
+					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
+					<li><a href="fault_output.html">Fault on Output Line</a></li>
+					<li><a href="procedure.html">Procedure for Simulation</a></li>
+					<li><a href="simulation.html">Simulation</a></li>
+					<li><a href="group.html">Group Information</a></li>
+					<li><a href="refs.html">References</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h2>Theory</h2>
+			<h3>Stuct-at-Fault</h3>
+			<p>A Stuck-at fault (SAF) is a logic-level fault that mimics a manufacturing defect on a digital device, circuits, etc. A Stuck-at-Fault is of two types: stuck-at-0 (SA0) and stuck-at-1 (SA1) fault. Stuck at faults occur when a line is permanently stuck to Vcc or ground giving a faulty output. This line may be an input or output to any gate. Also this fault can be single or multiple stuck at faults, Although in this experiment we will only talk about single stuck at faults.</p>
+			<p>Example of stuck-at-0:</p>
+			<p><img src="images/image_1.png" /></p>
+			<p>Example of stuck-at-1:</p>
+			<p><img src="images/image_2.png" /></p>
+			<p>A fault model is an engineering model of something that could go wrong in the construction or operation of a piece of equipment. From the model, the designer or user can then predict the consequences of this particular fault. To detect such fault, a suitable fault model is used. The user deliberately make Vcc or grounded positions and checks output. The user checks all types of faults that may occur in the circuit.</p>
+			<h3>4-to-16 decoder using 3-to-8 decoder</h3>
+			<p>The parallel inputs x, y & z are applied to each 3 to 8 decoder. The complement of input, w is connected to Enable, E of upper 3 to 8 decoder in order to get the outputs, D0 to D7. These are the first eight minterms. The input, w is directly connected to Enable, E of lower 3 to 8 decoder in order to get the outputs, D8 to D15. These are the last eight minterms.</p>
+			<p><img src="images/image_3.png" /></p>
+			<p>when the w is at logic '0' the above decoder is turned on and gives output (D0 to D7), and when w is at logic '1' the below decoder is turned on and gives output (D8 to D15).The truth table of the 4 to 16 decoder is as follows :-</p>
+			<p><img src="images/image_4.png" /></p>
+		</div>
+	</div>
+</body>
+</html>
