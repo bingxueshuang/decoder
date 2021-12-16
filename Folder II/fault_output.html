@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Layout</title>
+	<title>Fault on output lines</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js" defer></script>
 </head>
@@ -24,7 +24,7 @@
 					<li><a href="theory.html">Theory</a></li>
 					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
 					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
-					<li><a href="fault_output.html">Fault on Output Line</a></li>
+					<li class="active"><a href="fault_output.html">Fault on Output Line</a></li>
 					<li><a href="procedure.html">Procedure for Simulation</a></li>
 					<li><a href="simulation.html">Simulation</a></li>
 					<li><a href="group.html">Group Information</a></li>
@@ -33,18 +33,13 @@
 			</div>
 		</div>
 		<div class="content">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<h2>SA0 fault on output line</h2>
+			<p>Please note: SA0 faults on other output lines will lead to similar cases, with some outputs always being low (stuck-at-0) and others as expected</p>
+			<h3>SA0 fault on D0 output line</h3>
+			<p><img src="images/fault_output.jpeg" /></p>
+			<p>In this case, irrespective of the input, D0 is always low. If input is 0000, then output D0 is expected to be 1. But due to stuck-at-0 on line D0, output D0 is also low and hence no output is obtained. For all other inputs, the output obtained is the same as expected output.</p>
+			<p>The truth table for this case is given below:</p>
+			<p><img src="images/fault_outputtable.jpg" /></p>
 		</div>
 	</div>
 </body>
