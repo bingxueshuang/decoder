@@ -44,8 +44,13 @@ html{
 	left: 50%;
 	top: 40vh;
 	padding: 10px;
-	width: max(400px, 40%);
+	width: 40%;
 	transform: translate(-50%, -50%);
+}
+@media screen (max-width:600px) {
+	.modal {
+		width: 400px;
+	}
 }
 body.modal-open {
 	height: 100vh;
