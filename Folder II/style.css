@@ -2,18 +2,20 @@ html{
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
+	font-size: calc(15px + 1vh);
 }
 *, *::before, *::after {
 	box-sizing: inherit;
 }
 .content {
+	width: 100vw;
 	display: block;
 	padding: 10px;
 	position: relative;
 }
 .top-bar {
 	width: 100%;
-	height: 10vh;
+	height: 8vh;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -34,16 +36,16 @@ html{
 }
 .modal {
 	display: none;
-	background-color: #eec;
+	background-color: #fff;
 	border: 1px solid #555;
 	border-radius: 10px;
 	z-index: 5;
 	position: absolute;
 	left: 50%;
-	top: 50vh;
+	top: 40vh;
 	padding: 10px;
+	width: max(40%, 350px);
 	transform: translate(-50%, -50%);
-	max-width: max(300px, 30%);
 }
 body.modal-open {
 	height: 100vh;
@@ -67,7 +69,7 @@ body.modal-open .modal, body.modal-open .modal-backdrop {
 .button {
 	margin: 1vh;
 	display: inline-block;
-	height: 8vh;
+	height: 6vh;
 	cursor: pointer;
 	border-radius: 5px;
 }
@@ -76,4 +78,40 @@ body.modal-open .modal, body.modal-open .modal-backdrop {
 }
 .button:hover, .button:focus {
 	border: 1px solid #aaa;
+}
+.nav {
+	position: relative;
+	width: 100%;
+}
+.nav ul {
+	display: block;
+	width: 100%;
+	padding: 10px;
+}
+.nav li {
+	display: inline-block;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+}
+.nav a {
+	text-decoration: none;
+	color: #555;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+.nav li:hover a {
+	color: #fa5;
+}
+li.active a {
+	color: #fa5;
+	text-shadow: 1px 1px 1px #555;
+	font-size: 1.2rem;
+}
+h2 {
+	color: #37a;
+	width: 100%;
+}
+h3 {
+	color: #2af;
 }

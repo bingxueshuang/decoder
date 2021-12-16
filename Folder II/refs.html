@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>References</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+	</div>
+	<div style="position:relative;top:10vh;width:100%;height:100%;">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div style="width:100%;padding:10px;" onclick="modalClose();">
+				<span class="close-btn">&times;</span>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="aim.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
+					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
+					<li><a href="fault_output.html">Fault on Output Line</a></li>
+					<li><a href="procedure.html">Procedure for Simulation</a></li>
+					<li><a href="simulation.html">Simulation</a></li>
+					<li><a href="group.html">Group Information</a></li>
+					<li class="active"><a href="refs.html">References</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h2>References</h2>
+			<ul>
+				<li><a href="https://en.m.wikipedia.org/wiki/Stuck-at_fault">Stuck-at fault</a></li>
+				<li><a href="https://www.elprocus.com/designing-3-line-to-8-line-decoder-demultiplexer/">3 to 8 Decoder</a></li>
+				<li><a href="https://web.stanford.edu/class/ee386/public/stuck_at_fault_6per_page">Stuck at fault: fault model</a></li>
+				<li><a href="https://itectec.com/electrical/how-to-design-a-4-to-16-decoder-using-two-3-to-8-decoders-and-16-two-input-and-gates/">4 to 16 decoder</a></li>
+				<li><a href="https://accendoreliability.com/digital-circuits-stuck-fault-model/">SAF for basic gates</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Layout</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+	</div>
+	<div style="position:relative;top:10vh;width:100%;height:100%;">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div style="width:100%;padding:10px;" onclick="modalClose();">
+				<span class="close-btn">&times;</span>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="aim.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
+					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
+					<li><a href="fault_output.html">Fault on Output Line</a></li>
+					<li class="active"><a href="procedure.html">Procedure for Simulation</a></li>
+					<li><a href="simulation.html">Simulation</a></li>
+					<li><a href="group.html">Group Information</a></li>
+					<li><a href="refs.html">References</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h2>Procedure for Simulation</h2>
+			<p>The simulation should be displayed as shown:</p>
+			<p><img src="images/sim.png" /></p>
+			<ul>
+				<li>The circuit simulated is as shown.</li>
+				<li>Click the switches to select the required inputs named "x", "y", "z" and "w". The simulation will display corresponding output.</li>
+				<li>Output is displayed as a glowing bulb</li>
+				<li>At specific positions, small switches make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations.</li>
+				<li>Repeat above steps for all possible inputs and verify the truth table</li>
+			</ul>
+			<p><a href="simulation.html">Link</a> for simulation.</p>
+		</div>
+	</div>
+</body>
+</html>
