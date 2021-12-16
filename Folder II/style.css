@@ -44,7 +44,7 @@ html{
 	left: 50%;
 	top: 40vh;
 	padding: 10px;
-	max-width: max(400px, 30%);
+	width: max(400px, 40%);
 	transform: translate(-50%, -50%);
 }
 body.modal-open {
