@@ -2,7 +2,7 @@ html{
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	font-size: calc(15px + 1vh);
+	font-size: min(calc(12px + 1vw), calc(15px + 1vh));
 }
 *, *::before, *::after {
 	box-sizing: inherit;
@@ -39,8 +39,8 @@ img {
 	top: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: #777;
-	opacity: 0.5;
+	background-color: #444;
+	opacity: 0.8;
 }
 .modal {
 	display: none;
@@ -52,7 +52,10 @@ img {
 	left: 50%;
 	top: 40vh;
 	padding: 10px;
-	width: max(40%, 350px);
+	width: max(35%, 400px);
+	max-width: 100%;
+	max-height: 100%;
+	overflow-y: auto;
 	transform: translate(-50%, -50%);
 }
 body.modal-open {
