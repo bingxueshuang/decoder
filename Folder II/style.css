@@ -8,10 +8,18 @@ html{
 	box-sizing: inherit;
 }
 .content {
-	width: 100vw;
+	width: calc(100vw - 30px);
 	display: block;
 	padding: 10px;
 	position: relative;
+}
+p.center {
+	padding: 1vw;
+	width: 100%;
+	text-align: center;
+}
+img {
+	max-width: 100%;
 }
 .top-bar {
 	width: 100%;
@@ -111,6 +119,7 @@ li.active a {
 h2 {
 	color: #37a;
 	width: 100%;
+	text-align: center;
 }
 h3 {
 	color: #2af;
