@@ -1,6 +1,17 @@
-document.querySelectorAll('label.switch input').forEach(function(e){
-  e.checked = false;
-})
+resetTable();
+resetSim();
+function resetSim(){
+  document.querySelectorAll('label.switch input').forEach(function(e){
+    e.checked = false;
+  });
+}
+function resetTable(){
+  let list = document.querySelector('div.ttable tbody').children;
+  let i;
+  for(i = 0; i < list.length; i++){
+    list.item(i).remove();
+  }
+}
 function decoder3_8(inputs){
   let ans = 0;
   let pow = 1;
@@ -56,8 +67,37 @@ function evaluate(){
     e.classList.remove("glow");
   })
   outputs.forEach(function(e){
-    Dlist[e].classList.add("glow");
+    if(!document.querySelector("label.d"+e+" input").checked){
+        Dlist[e].classList.add("glow");
+    }
   })
+}
+function add(){
+  let row = document.createElement("tr");
+  let inps = ['w', 'x', 'y', 'z'];
+  let cell;
+  let val = 0;
+  let pow = 8;
+  let num;
+  inps.forEach(function (e){
+    cell = document.createElement("td");
+    num = document.querySelector('label.'+e+' input').checked + 0;
+    val = val + pow*num;
+    pow = pow/2;
+    cell.innerText = num;
+    row.appendChild(cell);
+  })
+  cell = document.createElement("td");
+  cell.innerText = "D" + val;
+  row.appendChild(cell);
+  cell = document.createElement("td");
+  let faulty = [];
+  document.querySelectorAll('.glow').forEach(function (e){
+    faulty.push(e.parentElement.parentElement.querySelector('label.switch').classList[1].toUpperCase());
+  })
+  cell.innerText = faulty.join(', ');
+  row.appendChild(cell);
+  document.querySelector('div.ttable tbody').appendChild(row);
 }
 document.querySelectorAll('label.switch input').forEach(function(e){
 	e.addEventListener("change", evaluate);
