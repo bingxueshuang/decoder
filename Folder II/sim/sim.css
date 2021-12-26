@@ -4,12 +4,19 @@ div {
 body{
   background-color: #fec;
 }
+div.toplevel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .simulation {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  width: 700px;
 }
 img[src="decoder.svg"] {
 	position: relative;
@@ -120,6 +127,7 @@ label.switch.w > span:after {
 
 /* Style for output bulbs */
 span.bulb {
+  position: relative;
   content: url("bulb_off.svg");
   height: 27px;
   width: 22px;
@@ -143,5 +151,40 @@ span.bulb.glow {
   -ms-justify-content: space-evenly;
   justify-content: space-evenly;
   text-align: left;
-  vertical-align: center;
+  vertical-align: middle;
+}
+
+
+/* new insertions */
+.output > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30px;
+}
+.output > div div {
+  flex: 1 0 auto;
+}
+.output label.switch {
+  position: relative;
+  --len: 25px;
+}
+.output label.switch > input ~ span:before {
+  background-color: #0f0;
+  height: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.output label.switch > input:checked ~ span:before {
+  background-color: #ccc;
+}
+.output label.switch > input ~ span:after {
+  width: calc(var(--len) / 2);
+  height: calc(var(--len) / 2);
+}
+table {
+  text-align: center;
+}
+table, table * {
+  padding: min(1vh, 1vw);
 }
