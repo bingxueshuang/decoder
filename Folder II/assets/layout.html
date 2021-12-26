@@ -4,15 +4,22 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Aim</title>
+	<title>CS203 Mini Project</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js" defer></script>
 </head>
 <body>
 	<div class="top-bar">
 		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="theory.html">Theory</a>
+			<a href="report.html">Report</a>
+			<a href="simulation.html">Simulation</a>
+		</div>
 	</div>
-	<div style="position:relative;top:10vh;width:100%;height:100%;">
+	<div></div>
+	<div class="main">
 		<div class="modal-backdrop"></div>
 		<div class="modal" onclick="">
 			<div style="width:100%;padding:10px;" onclick="modalClose();">
@@ -20,23 +27,24 @@
 			</div>
 			<div class="nav">
 				<ul>
-					<li class="active"><a href="aim.html">Aim</a></li>
-					<li><a href="theory.html">Theory</a></li>
-					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
-					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
-					<li><a href="fault_output.html">Fault on Output Line</a></li>
-					<li><a href="procedure.html">Procedure for Simulation</a></li>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="th.html">Theory</a></li>
+					<li><a href="fault_x.html">SA0 on X Line</a></li>
+					<li><a href="fault_w.html">SA0 on W Line</a></li>
+					<li><a href="fault_output.html">SA0 on Output Line</a></li>
+					<li><a href="procedure.html">Procedure</a></li>
 					<li><a href="simulation.html">Simulation</a></li>
-					<li><a href="group.html">Group Information</a></li>
 					<li><a href="refs.html">References</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="content">
-			<h2>Aim</h2>
-			<p>Detection of the Stuck-at-0 faults (SA0) on the 4x16 decoder constructed with two 3x8 decoders as shown in the image.</p>
-			<p class="center"><img src="images/question.png" /></p>
+		<div class="sidebar">
+			<ul></ul>
 		</div>
+		<div class="content">
+			<h2>Group 17 CS203 Mini Project</h2>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
 	</div>
 </body>
 </html>
