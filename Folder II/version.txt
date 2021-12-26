@@ -1,3 +1,4 @@
 This html report runs on latest versions of modern browsers like Google
 Chrome, Mozilla Firefox or Safari, etc. Javascript support and CSS3 support
 is required.
+For better simulation, please use device with wide screen.

@@ -8,4 +8,15 @@ function modalOpen(){
 	window.scrollVar = window.scrollY;
 	document.body.classList.add("modal-open");
 	document.querySelector("div.modal-backdrop").addEventListener("click", modalClose);
+	let sidebar = document.querySelector("div.sidebar");
+	if(sidebar){
+		sidebar.classList.toggle("hidden");
+	}
+}
+function scrolling(id){
+	window.scrollTo({
+		top: document.querySelector('#scroll_'+id).offsetTop,
+		left: 0,
+		behavior: "smooth"
+	});
 }
