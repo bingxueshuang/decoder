@@ -1,7 +1,0 @@
-- The circuit simulated is as shown in the below image.
-- Click the input switches to select the required inputs named "x", "y", "z" and "w". Switch in the on state is <img> and off state is <img>.
-- The simulation will display corresponding output. Output is displayed as a glowing bulb
-- Press the "ADD" button to display the output in truth table. Verify the input values and corresponding output values from the truth table
-- At specific positions, small switches <img> make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations.
-- There can be multiple SA0 faults on a single line at different locations.
-- Repeat above steps for all possible inputs and obtain the truth table.

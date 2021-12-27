@@ -179,6 +179,7 @@ h4 {
 }
 .sidebar ul {
 	position: fixed;
+	margin: 0;
 	top: 10vh;
 	padding: max(1vw, 1vh);
 }
