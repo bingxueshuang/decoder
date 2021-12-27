@@ -4,30 +4,24 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Simulation</title>
+	<title>SAF Simulation</title>
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="sim/sim.css" />
 	<script src="script.js" defer></script>
-	<style type="text/css">
-		div {
-			position: relative;
-		}
-		div.simulation a {
-			position: absolute;
-			top: 10px;
-			right: 10px;
-			opacity: 0;
-			transition: opacity 0.2s;
-		}
-		div.simulation:hover a {
-			opacity: 1;
-		}
-	</style>
+	<script src="sim/sim.js" defer></script>
 </head>
 <body>
 	<div class="top-bar">
-		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+		<span class="button" onclick="modalOpen();"><img src="hamburger.svg"  /></span>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="theory.html">Theory</a>
+			<a href="report.html">Report</a>
+			<a href="simulation.html">Simulation</a>
+		</div>
 	</div>
-	<div style="position:relative;top:10vh;width:100%;height:100%;">
+	<div></div>
+	<div class="main">
 		<div class="modal-backdrop"></div>
 		<div class="modal" onclick="">
 			<div style="width:100%;padding:10px;" onclick="modalClose();">
@@ -35,26 +29,83 @@
 			</div>
 			<div class="nav">
 				<ul>
-					<li><a href="aim.html">Aim</a></li>
-					<li><a href="theory.html">Theory</a></li>
-					<li><a href="fault_x.html">SA0 Fault on X Input Line	</a></li>
-					<li><a href="fault_w.html">SA0 Fault on W Input Line</a></li>
-					<li><a href="fault_output.html">Fault on Output Line</a></li>
-					<li><a href="procedure.html">Procedure for Simulation</a></li>
-					<li class="active"><a href="simulation.html">Simulation</a></li>
-					<li><a href="group.html">Group Information</a></li>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="th.html">Theory</a></li>
+					<li><a href="fault_x.html">SA0 on X Line</a></li>
+					<li><a href="fault_w.html">SA0 on W Line</a></li>
+					<li><a href="fault_output.html">SA0 on Output Line</a></li>
+					<li><a href="procedure.html">Procedure</a></li>
+					<li><a href="simulation.html">Simulation</a></li>
 					<li><a href="refs.html">References</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="content">
-			<h2>Simulation</h2>
-			<p>Below is the simulation for stuck at fault in 4x16 decoder. Check the <a href="procedure.html">procedure</a> about how to use simulator. Click the <a href="sim/sim.htm" target="_blank">link</a> to open in a new tab.</a></p>
+		<div class="toplevel">
+			<div class="heading"><h2>Simulation</h2><button class="instn" onclick="this.parentElement.querySelector('ul').classList.toggle('hidden');">instructions</button>
+				<div><ul class="hidden">
+					<li>The circuit simulated is as shown in the below image.</li>
+					<li>Click the input switches<img src="sim/switch_input.png" alt="" /> to select the required inputs named "x", "y", "z" and "w".</li>
+					<li> The simulation will display corresponding output. Output is displayed as a glowing bulb</li>
+					<li>Press the "ADD" button to display the output in the truth table.</li>
+					<li>Clear button clears all entries of truth table.</li>
+					<li>At specific positions, small switches<img src="sim/switch_saf.png" /> make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations.</li>
+					<li>Repeat above steps for all possible inputs and verify the truth table</li>
+				</ul></div>
+			</div>
 			<div class="simulation">
-				<a href="sim/sim.htm" target="_blank"><img src="sim/link.svg" height="40" width="40" /></a>
-				<iframe src="sim/sim.htm" title="Simulation" style="width: 100%; height: 600px;"></iframe>
+				<div class="input">
+					<label class="switch x" style="top: 45px;"><input type="checkbox" /><span></span></label>
+					<label class="switch y" style="top: 105px;"><input type="checkbox" /><span></span></label>
+					<label class="switch z" style="top: 165px;"><input type="checkbox" /><span></span></label>
+					<label class="switch w" style="top: 245px;"><input type="checkbox" /><span></span></label>
+				</div>
+				<div class="saf">
+					<label class="switch x0" style="left: 55px; top: 45px;"><input type="checkbox" /><span></span></label>
+					<label class="switch y0" style="left: 55px; top: 105px;"><input type="checkbox" /><span></span></label>
+					<label class="switch z0" style="left: 55px; top: 165px;"><input type="checkbox" /><span></span></label>
+					<label class="switch x1" style="left: 445px;top: 45px;"><input type="checkbox" /><span></span></label>
+					<label class="switch y1" style="left: 445px;top: 105px;"><input type="checkbox" /><span></span></label>
+					<label class="switch z1" style="left: 445px;top: 165px;"><input type="checkbox" /><span></span></label>
+					<label class="switch x2" style="left: 445px;top: 330px;"><input type="checkbox" /><span></span></label>
+					<label class="switch y2" style="left: 445px;top: 390px;"><input type="checkbox" /><span></span></label>
+					<label class="switch z2" style="left: 445px;top: 445px;"><input type="checkbox" /><span></span></label>
+					<label class="switch w0" style="left: 55px; top: 250px;"><input type="checkbox" /><span></span></label>
+					<label class="switch w1" style="left: 540px;top: 250px;"><input type="checkbox" /><span></span></label>
+					<label class="switch w2" style="left: 540px;top: 530px;"><input type="checkbox" /><span></span></label>
+					<label class="switch w3" style="left: 145px;top: 250px;"><input type="checkbox" /><span></span></label>
+				</div>
+				<img src="sim/decoder.svg" type="image/svg" width="630" height="540" style="position: relative; margin-left: 40px;" />
+				<div class="output">
+					<div><div style="width: 30px;"><label class="switch d0"><input type="checkbox" /><span></span></label></div><div><span class="bulb glow"></span>D0</div></div>
+					<div><div style="width: 30px;"><label class="switch d1"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D1</div></div>
+					<div><div style="width: 30px;"><label class="switch d2"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D2</div></div>
+					<div><div style="width: 30px;"><label class="switch d3"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D3</div></div>
+					<div><div style="width: 30px;"><label class="switch d4"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D4</div></div>
+					<div><div style="width: 30px;"><label class="switch d5"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D5</div></div>
+					<div><div style="width: 30px;"><label class="switch d6"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D6</div></div>
+					<div><div style="width: 30px;"><label class="switch d7"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D7</div></div>
+					<div><div style="width: 30px;"><label class="switch d8"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D8</div></div>
+					<div><div style="width: 30px;"><label class="switch d9"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D9</div></div>
+					<div><div style="width: 30px;"><label class="switch d10"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D10</div></div>
+					<div><div style="width: 30px;"><label class="switch d11"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D11</div></div>
+					<div><div style="width: 30px;"><label class="switch d12"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D12</div></div>
+					<div><div style="width: 30px;"><label class="switch d13"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D13</div></div>
+					<div><div style="width: 30px;"><label class="switch d14"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D14</div></div>
+					<div><div style="width: 30px;"><label class="switch d15"><input type="checkbox" /><span></span></label></div><div><span class="bulb"></span>D15</div></div>
+				</div>
+			</div>
+			<div class="ttable">
+				<h2>Truth Table</h2>
+				<div class="btns"><button onclick="add();">Add</button><button onclick="resetTable();">Clear</button><button onclick="window.print();">Print</button></div>
+				<table>
+					<thead>
+						<tr><td>w</td><td>x</td><td>y</td><td>z</td><td>Normal output</td><td>Faulty output</td></tr>
+					</thead>
+					<tbody></tbody>
+				</table>
 			</div>
 		</div>
+	<!--<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>-->
 	</div>
 </body>
 </html>

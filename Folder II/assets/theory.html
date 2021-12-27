@@ -79,7 +79,7 @@
 			<p class="center"><img src="images/image_3.png" /></p>
 			<p>when the w is at logic '0' the above decoder is turned on and gives output (D0 to D7), and when w is at logic '1' the below decoder is turned on and gives output (D8 to D15).The truth table of the 4 to 16 decoder is as follows :-</p>
 			<p class="center"><img src="images/image_4.png" /></p>
-<!-- Change from here -->
+<!-- Change h2 to h3 from here -->
 			<h3 id="scroll_x">SA0 fault on x input wire</h3>
 			<p>Please note: SA0 faults on y and z wires will lead to similar cases, with some inputs always being low and other inputs as provided</p>
 			<h4>Case (i)</h4>
@@ -136,7 +136,19 @@
 			<p>In this case, irrespective of the input, D0 is always low. If input is 0000, then output D0 is expected to be 1. But due to stuck-at-0 on line D0, output D0 is also low and hence no output is obtained. For all other inputs, the output obtained is the same as expected output.</p>
 			<p class="center">The truth table for this case is given below:</p>
 			<p class="center"><img src="images/fault_outputtable.jpg" /></p>
-<!-- Procedure comes here also -->
+			<h3 id="scroll_proc">Procedure for Simulation</h2>
+			<ul>
+				<li>The circuit simulated is as shown in the below image.</li>
+				<li>Click the input switches to select the required inputs named "x", "y", "z" and "w". Switch in the "ON" state is<img src="sim/switch_input_on.png" /> and "OFF" state is <img src="sim/switch_input.png">.</li>
+				<li> The simulation will display corresponding output. Output is displayed as a glowing bulb</li>
+				<li>Press the "ADD" button to display the output in the truth table. Verify the input values and corresponding output values from the truth table.</li>
+				<li>Clear button clears all entries of truth table.</li>
+				<li>At specific positions, small switches make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations. Line is stuck-at-0 if <img src="sim/switch_saf_on.png" />. The line is normal if switch is green <img src="sim/switch_saf.png" />.</li>
+				<li>Repeat above steps for all possible inputs and verify the truth table.</li>
+			</ul>
+			<p><a href="simulation.html">Link</a> for simulation.</p>
+			<p>The simulation should be displayed as shown:</p>
+			<p class="center"><img src="images/sim.png" style="max-height: 400px;" /></p>
 		</div>
 		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
 	</div>

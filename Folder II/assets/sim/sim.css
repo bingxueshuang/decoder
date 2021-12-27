@@ -5,10 +5,12 @@ body{
   background-color: #fec;
 }
 div.toplevel {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 5vh;
 }
 .simulation {
   display: -webkit-box;
@@ -18,9 +20,12 @@ div.toplevel {
   display: flex;
   width: 700px;
 }
-img[src="decoder.svg"] {
-	position: relative;
-	margin-left: 40px;
+div.heading {
+  width: 100%;
+  position: relative;
+}
+div.heading img {
+  display: inline;
 }
 
 /* Style for switch buttons */
@@ -187,4 +192,94 @@ table {
 }
 table, table * {
   padding: min(1vh, 1vw);
+  border: 1px solid #000;
+}
+div.ttable {
+  font-size: 0.9rem;
+  margin-left: 60px;
+}
+div.ttable h2 {
+  color: #33f;
+}
+div.ttable td.danger {
+  background-color: #f33;
+  color: #fff;
+}
+@media screen and (max-width: 1250px){
+  div.toplevel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  div.ttable {
+    padding: max(1vh, 1vw);
+    margin-left: 0;
+  }
+}
+@media print {
+  div.top-bar, div.heading, div.simulation, div.btns * {
+    display: none;
+  }
+  div.ttable {
+    margin: 0;
+  }
+}
+div.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: max(1vw, 1vh);
+  border-top: 2px solid #ccc;
+}
+button {
+  padding: min(1vw, 1vh);
+  font-size: 1rem;
+  font-variant: small-caps;
+  font-family: serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+div.btns button {
+  background-color: #33f;
+  color: #fff;
+  font-weight: bold;
+}
+div.btns button:focus, div.btns button:hover {
+  box-shadow: 0 0 5px #0ffa;
+  outline: 1px solid #33f;
+}
+button.instn {
+  position: relative;
+  color: #fff;
+  background-color: #4a4;
+  left: 20%;
+}
+button.instn:focus, button.instn:hover {
+  outline: 1px solid #3f3a;
+}
+.heading div {
+  padding: max(1.5vw, 1.5vh);
+  width: 100%;
+}
+.heading ul {
+  width: 80%;
+  margin: 0 10%;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px #000a;
+  overflow-x: hidden;
+  max-height: 600px;
+  transition: max-height 0.2s linear;
+}
+.heading li:first-child {
+  margin-top: min(1.5vw, 1.5vh);
+}
+.heading li {
+  padding: 0 10px;
+}
+.heading li:last-child {
+  margin-bottom: min(1.5vw, 1.5vh);
+}
+.heading ul.hidden {
+  max-height: 0;
 }

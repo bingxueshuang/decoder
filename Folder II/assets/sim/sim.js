@@ -7,9 +7,8 @@ function resetSim(){
 }
 function resetTable(){
   let list = document.querySelector('div.ttable tbody').children;
-  let i;
-  for(i = 0; i < list.length; i++){
-    list.item(i).remove();
+  while(list.length > 0){
+    list[0].remove();
   }
 }
 function decoder3_8(inputs){
@@ -96,6 +95,12 @@ function add(){
     faulty.push(e.parentElement.parentElement.querySelector('label.switch').classList[1].toUpperCase());
   })
   cell.innerText = faulty.join(', ');
+  if(cell.innerText == ''){
+    cell.innerText = "-";
+  }
+  if(faulty.length != 1 || parseInt(faulty[0].substr(1)) != val){
+    cell.classList.add('danger');
+  }
   row.appendChild(cell);
   document.querySelector('div.ttable tbody').appendChild(row);
 }

@@ -41,15 +41,17 @@
 		<div class="content">
 			<h2>Procedure for Simulation</h2>
 			<ul>
-				<li>The circuit simulated is as shown.</li>
-				<li>Click the switches to select the required inputs named "x", "y", "z" and "w". The simulation will display corresponding output.</li>
-				<li>Output is displayed as a glowing bulb</li>
-				<li>At specific positions, small switches make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations.</li>
-				<li>Repeat above steps for all possible inputs and verify the truth table</li>
+				<li>The circuit simulated is as shown in the below image.</li>
+				<li>Click the input switches to select the required inputs named "x", "y", "z" and "w". Switch in the "ON" state is<img src="sim/switch_input_on.png" /> and "OFF" state is <img src="sim/switch_input.png">.</li>
+				<li> The simulation will display corresponding output. Output is displayed as a glowing bulb</li>
+				<li>Press the "ADD" button to display the output in the truth table. Verify the input values and corresponding output values from the truth table.</li>
+				<li>Clear button clears all entries of truth table.</li>
+				<li>At specific positions, small switches make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations. Line is stuck-at-0 if <img src="sim/switch_saf_on.png" />. The line is normal if switch is green <img src="sim/switch_saf.png" />.</li>
+				<li>Repeat above steps for all possible inputs and verify the truth table.</li>
 			</ul>
 			<p><a href="simulation.html">Link</a> for simulation.</p>
 			<p>The simulation should be displayed as shown:</p>
-			<p class="center"><img src="images/sim.png" style="max-height: 300px;" /></p>
+			<p class="center"><img src="images/sim.png" style="max-height: 400px;" /></p>
 		</div>
 		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
 	</div>
