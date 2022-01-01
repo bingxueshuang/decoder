@@ -215,6 +215,9 @@ div.ttable td.danger {
     padding: max(1vh, 1vw);
     margin-left: 0;
   }
+  div.ttable td {
+    min-width: 2rem;
+  }
 }
 @media print {
   div.top-bar, div.heading, div.simulation, div.btns * {
