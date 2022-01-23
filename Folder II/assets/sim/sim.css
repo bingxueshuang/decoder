@@ -189,8 +189,9 @@ span.bulb.glow {
 }
 table {
   text-align: center;
+  border:  1px solid #000;
 }
-table, table * {
+table * {
   padding: min(1vh, 1vw);
   border: 1px solid #000;
 }
@@ -295,13 +296,13 @@ button.instn:focus, button.instn:hover {
   transition: max-height 0.2s linear;
 }
 .heading li:first-child {
-  margin-top: min(1.5vw, 1.5vh);
+  margin-top: 1.5em;
 }
 .heading li {
   padding: 0 10px;
 }
 .heading li:last-child {
-  margin-bottom: min(1.5vw, 1.5vh);
+  margin-bottom: 1.5em;
 }
 .heading ul.hidden {
   max-height: 0;
