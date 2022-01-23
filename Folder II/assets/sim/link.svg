@@ -1,5 +1,0 @@
-<?xml version="1.0" standalone="no"?>
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="130" height="130" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" >
-	<path d="m 10 20 m 70 0 l -60 0 a 10 10 0 0 0 -10 10 l 0 80 a 10 10 0 0 0 10 10 l 80 0 a 10 10 0 0 0 10 -10 l 0 -60" /> <!--rectangular arc-->
-	<path d="m 10 20 m 50 50 l 60 -60 m -30 0 l 30 0 m 0 30 l 0 -30" /> <!--arrow-->
-</svg>

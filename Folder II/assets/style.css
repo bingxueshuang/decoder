@@ -3,6 +3,11 @@ html{
 	height: 100%;
 	font-size: min(calc(12px + 1vw), calc(15px + 1vh));
 	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
 }
 div.main {
 	 position:relative;
@@ -10,7 +15,7 @@ div.main {
 	 width:100%;
 	 height:100%;
 	 display: flex;
-	 width: 96vw;
+	 width: min(100%, 96vw)
 	 padding-right: 0;
 }
 .content {
@@ -30,13 +35,18 @@ img {
 .top-bar {
 	box-sizing: border-box;
 	width: 100%;
-	height: 10vh;
+	height: 8vh;
 	position: fixed;
 	left: 0;
 	top: 0;
 	background-color: #fff;
 	border-bottom: 3px solid #fa5;
 	z-index: 3;
+}
+.top-bar::after {
+	display: block;
+	content: "";
+	clear: both;
 }
 .top-bar *{
 	box-sizing: border-box;
@@ -51,15 +61,19 @@ img {
 	position: relative;
 	text-decoration: none;
 	color: #555;
-	line-height: 6vh;
+	line-height: 4vh;
 	font-size: 0.9rem;
 	padding: 1vh;
 }
-.top-bar .nav a:hover, .top-bar .nav a:visited {
+.top-bar .nav a:hover, .top-bar .nav a.active {
 	color: #000;
 }
+.top-bar .nav a.active {
+	font-variant: small-caps;
+	font-weight: bolder;
+}
 div.scrollTop {
-	--round: max(5vw, 5vh);
+	--round: max(4vw, 4vh);
 	position: fixed;
 	right: 1vw;
 	bottom: 1vh;
@@ -83,23 +97,26 @@ div.scrollTop:hover {
 	width: 100%;
 	height: 100vh;
 	background-color: #444;
-	opacity: 0.8;
+	opacity: 0.6;
 }
 .modal {
-	display: none;
 	background-color: #fff;
 	border: 1px solid #555;
 	border-radius: 10px;
 	z-index: 7;
 	position: absolute;
 	left: 50vw;
-	top: 40vh;
+/*	top: 40vh;*/
+	top: -100vh;
 	padding: 10px;
-	width: max(35%, 400px);
+	width: max(35%, 320px);
 	max-width: 100%;
-	max-height: 100%;
+	max-height: 90%;
 	overflow-y: auto;
 	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: top 0.2s ease, opacity 0.4s ease;
+	box-shadow: 2px 2px 5px #555;
 }
 .modal * {
 	box-sizing: border-box;
@@ -107,10 +124,11 @@ div.scrollTop:hover {
 .close-btn {
 	color: #aaa;
 	float: right;
-	font-size: 28px;
+	font-size: 1.8rem;
 	font-weight: bold;
 	cursor: pointer;
 	border-radius: 5px;
+	padding: 1rem;
 }
 .close-btn:hover, .close:focus {
 	color: #000;
@@ -118,15 +136,16 @@ div.scrollTop:hover {
 .button {
 	margin: 1vh;
 	display: inline-block;
-	height: 8vh;
+	height: 6vh;
 	cursor: pointer;
 	border-radius: 5px;
+	display: none;
 }
 .button img{
 	height: 100%;
 }
 .button:hover, .button:focus {
-	border: 1px solid #aaa;
+	outline: 1px solid #aaa;
 }
 .modal .nav {
 	position: relative;
@@ -136,6 +155,7 @@ div.scrollTop:hover {
 	display: block;
 	width: 100%;
 	padding: 10px;
+	margin: 0;
 }
 .modal .nav li {
 	display: inline-block;
@@ -150,71 +170,67 @@ div.scrollTop:hover {
 }
 .modal .nav a:hover {
 	color: #fa5;
+	text-decoration: underline;
 }
 .modal .nav li.active a {
 	color: #fa5;
 	text-shadow: 1px 1px 1px #555;
 	font-size: 1.2rem;
 }
+/* external links */
+a[href^="http"]::after {
+	content: "";
+	display: inline-block;
+	background-image: url(images/link.svg);
+	width: 1.2em;
+	height: 1.2em;
+	background-size: 0.9em;
+	background-repeat: no-repeat;
+  background-position: bottom right;
+}
 h2 {
+	font-size: 1.5em;
 	color: #37a;
 	width: 100%;
 	text-align: center;
 }
 h3 {
+	font-size: 1.2em;
 	color: #2af;
 }
 h4 {
+	font-size: 1em;
 	color: #5aa;
 }
 
-/* later */
-
-.sidebar {
-	flex: 1 0 auto;
-	width: 250px;
-	overflow: hidden;
-	border-right: 1px solid #ccc;
-	transition: width 0.1s linear;
+@media screen and (max-width: 700px) {
+	.top-bar .nav a {
+		font-size: 0.7rem;
+	}
 }
-.sidebar ul {
-	position: fixed;
-	margin: 0;
-	top: 10vh;
-	padding: max(1vw, 1vh);
+@media screen and (max-height: 400px) {
+	.top-bar .nav a {
+		font-size: 0.7rem;
+	}
 }
-.sidebar li {
-	display: block;
-	cursor: pointer;
-	padding: min(1vh, 1vw);
-}
-.sidebar li:hover {
-	color: #fa5;
-}
-.sidebar.hidden {
-	width: 0;
-}
-.sidebar.hidden ul {
-	position: relative;
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 560px) {
 	body.modal-open {
+		width: 100vw;
 		height: 100vh;
 		overflow-y: hidden;
 		position: fixed;
 	}
-	body.modal-open .modal, body.modal-open .modal-backdrop {
+	body.modal-open .modal-backdrop {
 		display: block;
 	}
-	.sidebar {
-		width: 0;
+	body.modal-open .modal {
+		top: 40vh;
+		opacity: 1;
 	}
-	.sidebar ul {
-		position: relative;
-	}
-}
-@media screen and (max-height: 300px) {
 	.top-bar .nav {
 		display: none;
+	}
+	.button {
+		display: inline-block;
 	}
 }

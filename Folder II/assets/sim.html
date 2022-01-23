@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>SAF Simulation</title>
+	<title>Simulation</title>
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" type="text/css" href="sim/sim.css" />
 	<script src="script.js" defer></script>
@@ -12,36 +12,41 @@
 </head>
 <body>
 	<div class="top-bar">
-		<span class="button" onclick="modalOpen();"><img src="hamburger.svg"  /></span>
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
 		<div class="nav">
 			<a href="index.html">Home</a>
 			<a href="theory.html">Theory</a>
-			<a href="procedure.html">Procedure</a>
-			<a href="simulation.html">Simulation</a>
+			<a href="pre.html">Pretest</a>
+			<a href="proc.html">Procedure</a>
+			<a href="sim.html" class="active">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html">Reference</a>
 		</div>
 	</div>
-	<div></div>
 	<div class="main">
 		<div class="modal-backdrop"></div>
 		<div class="modal" onclick="">
-			<div style="width:100%;padding:10px;" onclick="modalClose();">
-				<span class="close-btn">&times;</span>
-			</div>
 			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
 				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="th.html">Theory</a></li>
-					<li><a href="fault_x.html">SA0 on X Line</a></li>
-					<li><a href="fault_w.html">SA0 on W Line</a></li>
-					<li><a href="fault_output.html">SA0 on Output Line</a></li>
-					<li><a href="procedure.html">Procedure</a></li>
-					<li><a href="simulation.html">Simulation</a></li>
-					<li><a href="refs.html">References</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html">Pretest</a></li>
+					<li><a href="proc.html">Procedure</a></li>
+					<li class="active"><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li><a href="ref.html">Reference</a></li>
 				</ul>
 			</div>
 		</div>
+		<!-- Sidebar removed -->
 		<div class="toplevel">
-			<div class="heading"><h2>Simulation</h2><button class="instn" onclick="this.parentElement.querySelector('ul').classList.toggle('hidden');">instructions</button>
+			<div class="heading"><h2>Simulation</h2>
+				<div class="btn-grp">
+					<button class="instn" onclick="this.parentElement.parentElement.querySelector('ul').classList.toggle('hidden');">instructions</button>
+					<button class="primary" onclick="evaluatesim();">RUN</button>
+					<button class="outline" onclick="resetSim();">Reset</button>
+				</div>
 				<div><ul class="hidden">
 					<li>The circuit simulated is as shown in the below image.</li>
 					<li>Click the input switches<img src="sim/switch_input.png" alt="" /> to select the required inputs named "x", "y", "z" and "w".</li>
@@ -105,7 +110,7 @@
 				</table>
 			</div>
 		</div>
-	<!--<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>-->
+		<!--<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>-->
 	</div>
 </body>
 </html>

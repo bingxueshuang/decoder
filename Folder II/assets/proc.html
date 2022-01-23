@@ -10,34 +10,34 @@
 </head>
 <body>
 	<div class="top-bar">
-		<span class="button" onclick="modalOpen();"><img src="hamburger.svg" /></span>
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
 		<div class="nav">
 			<a href="index.html">Home</a>
 			<a href="theory.html">Theory</a>
-			<a href="procedure.html">Procedure</a>
-			<a href="simulation.html">Simulation</a>
+			<a href="pre.html">Pretest</a>
+			<a href="proc.html" class="active">Procedure</a>
+			<a href="sim.html">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html">Reference</a>
 		</div>
 	</div>
-	<div></div>
 	<div class="main">
 		<div class="modal-backdrop"></div>
 		<div class="modal" onclick="">
-			<div style="width:100%;padding:10px;" onclick="modalClose();">
-				<span class="close-btn">&times;</span>
-			</div>
 			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="th.html">Theory</a></li>
-					<li><a href="fault_x.html">SA0 on X Line</a></li>
-					<li><a href="fault_w.html">SA0 on W Line</a></li>
-					<li><a href="fault_output.html">SA0 on Output Line</a></li>
-					<li class="active"><a href="procedure.html">Procedure</a></li>
-					<li><a href="simulation.html">Simulation</a></li>
-					<li><a href="refs.html">References</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html">Pretest</a></li>
+					<li class="active"><a href="proc.html">Procedure</a></li>
+					<li><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li><a href="ref.html">Reference</a></li>
 				</ul>
 			</div>
 		</div>
+		<!-- Sidebar removed -->
 		<div class="content">
 			<h2>Procedure for Simulation</h2>
 			<ul>
@@ -49,7 +49,7 @@
 				<li>At specific positions, small switches make the lines stuck-at-0. Clicking them simulates SA0 faults at the said locations. Line is stuck-at-0 if <img src="sim/switch_saf_on.png" />. The line is normal if switch is green <img src="sim/switch_saf.png" />.</li>
 				<li>Repeat above steps for all possible inputs and verify the truth table.</li>
 			</ul>
-			<p><a href="simulation.html">Link</a> for simulation.</p>
+			<p><a href="sim.html">Link</a> for simulation.</p>
 			<p>The simulation should be displayed as shown:</p>
 			<p class="center"><img src="images/sim.png" style="max-height: 400px;" /></p>
 		</div>

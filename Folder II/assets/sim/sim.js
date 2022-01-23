@@ -20,7 +20,7 @@ function decoder3_8(inputs){
   })
   return ans;
 }
-function evaluate(){
+function evaluatesim(){
   let vars = [
     'x', 'x0', 'x1', 'x2',
     'y', 'y0', 'y1', 'y2',
@@ -104,6 +104,6 @@ function add(){
   row.appendChild(cell);
   document.querySelector('div.ttable tbody').appendChild(row);
 }
-document.querySelectorAll('label.switch input').forEach(function(e){
-	e.addEventListener("change", evaluate);
-})
+/*document.querySelectorAll('label.switch input').forEach(function(e){
+	e.addEventListener("change", evaluatesim);
+})*/

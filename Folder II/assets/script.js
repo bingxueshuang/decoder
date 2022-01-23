@@ -13,10 +13,3 @@ function modalOpen(){
 		sidebar.classList.toggle("hidden");
 	}
 }
-function scrolling(id){
-	window.scrollTo({
-		top: document.querySelector('#scroll_'+id).offsetTop,
-		left: 0,
-		behavior: "smooth"
-	});
-}

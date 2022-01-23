@@ -2,7 +2,7 @@ div {
   position: relative;
 }
 body{
-  background-color: #fec;
+  background-color: #fff7f7;
 }
 div.toplevel {
   width: 100%;
@@ -227,7 +227,7 @@ div.ttable td.danger {
     margin: 0;
   }
 }
-div.btns {
+div.btns, div.btn-grp {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -242,6 +242,7 @@ button {
   font-family: serif;
   border-radius: 0.3rem;
   cursor: pointer;
+  text-align: center;
 }
 div.btns button {
   background-color: #33f;
@@ -252,11 +253,42 @@ div.btns button:focus, div.btns button:hover {
   box-shadow: 0 0 5px #0ffa;
   outline: 1px solid #33f;
 }
+div.btn-grp {
+  max-width: 480px;
+  margin: 0 auto;
+}
+button.primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+button.primary:active {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+button.primary:hover, button.primary:focus {
+  box-shadow: 0 0 0 0.1rem #3ff8;
+  outline: none;
+}
+button.outline {
+  color: #0d6efd;
+  border-width: 1px;
+  font-variant: normal;
+  border-color: #0d6efd;
+  background-color: transparent;
+}
+button.outline:active, button.outline:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+button.outline:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1rem #3ff8;
+}
 button.instn {
-  position: relative;
   color: #fff;
   background-color: #4a4;
-  left: 20%;
 }
 button.instn:focus, button.instn:hover {
   outline: 1px solid #3f3a;

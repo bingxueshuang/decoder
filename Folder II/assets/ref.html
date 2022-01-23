@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>References</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+	<style type="text/css">
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+div.container * {
+	box-sizing: border-box;
+}
+div.container div {
+  border: 1px solid #eee;
+  padding: 0.5em;
+}
+div.contrib {
+  flex-shrink: 0;
+}
+div.contrib ul {
+  font-size: 0.9em;
+}
+
+@media screen and (min-width: 840px) {
+  div.container {
+  	flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+}
+h4 {
+  margin: 1em 0;
+}
+hr {
+  color: #eee;
+  border-width: 1px;
+}	</style>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="theory.html">Theory</a>
+			<a href="pre.html">Pretest</a>
+			<a href="proc.html">Procedure</a>
+			<a href="sim.html">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html" class="active">Reference</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html">Pretest</a></li>
+					<li><a href="proc.html">Procedure</a></li>
+					<li><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li class="active"><a href="ref.html">Reference</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Sidebar removed -->
+		<div class="content">
+			<h2>References</h2>
+			<div class="container">
+				<div class="ref"><h4>References</h4><hr /><ul>
+					<li>I am a very long line waiting to be wrapped onto the next line and hence increasing or in any way changing its parent's width or other properties. This line has not yet ended. Please wait until this line ends...
+					<li><a href="https://en.m.wikipedia.org/wiki/Stuck-at_fault">Stuck-at fault</a></li>
+					<li><a href="https://www.elprocus.com/designing-3-line-to-8-line-decoder-demultiplexer/">3 to 8 Decoder</a></li>
+					<li><a href="https://web.stanford.edu/class/ee386/public/stuck_at_fault_6per_page">Stuck at fault: fault model</a></li>
+					<li><a href="https://itectec.com/electrical/how-to-design-a-4-to-16-decoder-using-two-3-to-8-decoders-and-16-two-input-and-gates/">4 to 16 decoder</a></li>
+					<li><a href="https://accendoreliability.com/digital-circuits-stuck-fault-model/">SAF for basic gates</a></li>
+				</ul></div>
+				<div class="contrib"><h4>Contributors list</h4><hr /><p>Developer :</p><p> Dr. Biswajith R. Bhowmik | NITK</p><p>Contributors :</p><ul style="list-style: none;">
+					<li>Nitin Chaudhary | NITK</li>
+					<li>Syed Abdul Gafoor | NITK</li>
+					<li>Vikas Keshavamurthy Bhat | NITK</li>
+					<li>Manojna K P | NITK</li>
+					<li>Abhinav R | NITK</li>
+				</ul></div>
+			</div>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
+	</div>
+</body>
+</html>
