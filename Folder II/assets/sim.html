@@ -42,11 +42,7 @@
 		<!-- Sidebar removed -->
 		<div class="toplevel">
 			<div class="heading"><h2>Simulation</h2>
-				<div class="btn-grp">
-					<button class="instn" onclick="this.parentElement.parentElement.querySelector('ul').classList.toggle('hidden');">instructions</button>
-					<button class="primary" onclick="evaluatesim();">RUN</button>
-					<button class="outline" onclick="resetSim();">Reset</button>
-				</div>
+				<button class="instn" onclick="this.parentElement.querySelector('ul').classList.toggle('hidden');">instructions</button>
 				<div><ul class="hidden">
 					<li>The circuit simulated is as shown in the below image.</li>
 					<li>Click the input switches<img src="sim/switch_input.png" alt="" /> to select the required inputs named "x", "y", "z" and "w".</li>
@@ -101,7 +97,7 @@
 			</div>
 			<div class="ttable">
 				<h2>Truth Table</h2>
-				<div class="btns"><button onclick="add();">Add</button><button onclick="resetTable();">Clear</button><button onclick="window.print();">Print</button></div>
+				<div class="btns"><button onclick="add();" class="primary">RUN</button><button onclick="resetAll();" class="outline" style="font-size: 1.2em;">reset</button><button onclick="window.print();" class="outline">Print</button></div>
 				<table>
 					<thead>
 						<tr><td>w</td><td>x</td><td>y</td><td>z</td><td>Normal output</td><td>Faulty output</td></tr>

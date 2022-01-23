@@ -1,15 +1,19 @@
-resetTable();
-resetSim();
+resetAll();
 function resetSim(){
   document.querySelectorAll('label.switch input').forEach(function(e){
     e.checked = false;
   });
+  evaluatesim();
 }
 function resetTable(){
   let list = document.querySelector('div.ttable tbody').children;
   while(list.length > 0){
     list[0].remove();
   }
+}
+function resetAll(){
+  resetTable();
+  resetSim();
 }
 function decoder3_8(inputs){
   let ans = 0;
@@ -104,6 +108,6 @@ function add(){
   row.appendChild(cell);
   document.querySelector('div.ttable tbody').appendChild(row);
 }
-/*document.querySelectorAll('label.switch input').forEach(function(e){
+document.querySelectorAll('label.switch input').forEach(function(e){
 	e.addEventListener("change", evaluatesim);
-})*/
+})

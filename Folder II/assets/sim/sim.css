@@ -227,7 +227,7 @@ div.ttable td.danger {
     margin: 0;
   }
 }
-div.btns, div.btn-grp {
+div.btns {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -243,19 +243,6 @@ button {
   border-radius: 0.3rem;
   cursor: pointer;
   text-align: center;
-}
-div.btns button {
-  background-color: #33f;
-  color: #fff;
-  font-weight: bold;
-}
-div.btns button:focus, div.btns button:hover {
-  box-shadow: 0 0 5px #0ffa;
-  outline: 1px solid #33f;
-}
-div.btn-grp {
-  max-width: 480px;
-  margin: 0 auto;
 }
 button.primary {
   color: #fff;
@@ -273,7 +260,6 @@ button.primary:hover, button.primary:focus {
 button.outline {
   color: #0d6efd;
   border-width: 1px;
-  font-variant: normal;
   border-color: #0d6efd;
   background-color: transparent;
 }
@@ -287,8 +273,10 @@ button.outline:focus {
   box-shadow: 0 0 0 0.1rem #3ff8;
 }
 button.instn {
+  position: relative;
   color: #fff;
   background-color: #4a4;
+  left: 20%;
 }
 button.instn:focus, button.instn:hover {
   outline: 1px solid #3f3a;
