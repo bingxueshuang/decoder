@@ -14,6 +14,12 @@ function validate(){
 			);
 		} else {
 			node.parentElement.parentElement.classList.add("wrong");
+			Array.prototype.forEach.call(
+				node.parentElement.parentElement.parentElement.querySelectorAll("li.correct"),
+				function(crkt){
+					crkt.classList.remove("correct");
+				}
+			);
 		}
 	});
 	document.getElementById('output').innerHTML = count + " of " + total;
