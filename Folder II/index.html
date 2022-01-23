@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-window.location = "assets/index.html";
-</script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Home</title>
+	<link rel="stylesheet" href="assets/ui/style.css" />
+	<script src="assets/ui/script.js" defer></script>
 </head>
 <body>
-<p> redirecting . . . </p>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="assets/images/hamburger.svg" /></span>
+		<div class="nav">
+			<a href="assets/index.html" class="active">Home</a>
+			<a href="assets/theory.html">Theory</a>
+			<a href="assets/pre.html">Pretest</a>
+			<a href="assets/proc.html">Procedure</a>
+			<a href="assets/sim.html">Simulation</a>
+			<a href="assets/post.html">Posttest</a>
+			<a href="assets/ref.html">Reference</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
+				<ul>
+					<li class="active"><a href="assets/index.html">Home</a></li>
+					<li><a href="assets/theory.html">Theory</a></li>
+					<li><a href="assets/pre.html">Pretest</a></li>
+					<li><a href="assets/proc.html">Procedure</a></li>
+					<li><a href="assets/sim.html">Simulation</a></li>
+					<li><a href="assets/post.html">Posttest</a></li>
+					<li><a href="assets/ref.html">Reference</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Sidebar removed -->
+		<div class="content">
+			<h2>Group 17 CS203 Mini Project</h2>
+			<h3>Aim</h3>
+			<p>Detection of the Stuck-at-0 faults (SA0) on the 4x16 decoder constructed with two 3x8 decoders as shown in the image.</p>
+			<p class="center"><img src="assets/images/question.png" /></p>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="assets/images/top.svg" /></div>
+	</div>
 </body>
 </html>
