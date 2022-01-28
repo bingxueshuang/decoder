@@ -25,8 +25,15 @@ IC chip used for implementation of 3x8 line-decoder
 Question - 4
 The 4x16 line-decoder implemented using two 3x8 line-decoders has enable as
 
----> one of the inputs
+---> one of the inputs*
 ---> one of the outputs
 ---> Xor of two inputs
 ---> Nxor of two inputs
+
+Question - 5
+SA0 present at a location means the signal passing through that line
+---> is ambiguous
+---> is always 0*
+---> is always 1
+---> none of the above
 

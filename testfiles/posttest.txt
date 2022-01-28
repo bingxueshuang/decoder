@@ -28,3 +28,7 @@ It is always possible to detect a Stuck-at-0 fault using some input values.
 ---> True *
 ---> False
 
+Question - 5
+By considering Stuck-at-0 fault (line always passes signal 0) at different locations, all the SA0 fault cases can be identified
+---> True*
+---> False
