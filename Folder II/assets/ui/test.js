@@ -24,3 +24,6 @@ function validate(){
 	});
 	document.getElementById('output').innerHTML = count + " of " + total;
 }
+document.querySelectorAll("input[type='radio']").forEach(function (input){
+	input.checked = false;
+});
