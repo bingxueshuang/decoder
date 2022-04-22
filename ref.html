@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>References</title>
+	<link rel="stylesheet" href="ui/style.css" />
+	<link rel="stylesheet" href="ui/ref.css" />
+	<script src="ui/script.js" defer></script>
+	<style type="text/css">
+	div.container {
+	  margin: 0 auto;
+	  padding: 0.5em;
+	}
+	div.ref li {
+	  margin: 0.5em 0;
+	}
+	@media screen and (min-width: 960px) {
+	  div.container {
+	    width: 80%;
+	  }
+	}
+	</style>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
+		<div class="nav">
+			<a href="index.html">Aim</a>
+			<a href="theory.html">Theory</a>
+			<a href="pre.html">Pretest</a>
+			<a href="proc.html">Procedure</a>
+			<a href="sim.html">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html" class="active">Reference</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
+				<ul>
+					<li><a href="index.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html">Pretest</a></li>
+					<li><a href="proc.html">Procedure</a></li>
+					<li><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li class="active"><a href="ref.html">Reference</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Sidebar removed -->
+		<div class="content">
+			<h2>References</h2>
+			<div class="container">
+				<div class="ref"><h4>References</h4><hr /><ul>
+					<li>Digital Design with an Introduction to the Verilog HDL, VHDL, and SystemVerilog, M.Morris Mano and Michael D. Ciletti, Pearson Education, 6th Edition, 2018.</li>
+					<li>Synthesis and Optimization of Digital Circuits, Giovanni De Micheli, McGraw Hill Education; 1st Edition, 2017.</li>
+					<li>Introduction to Logic and Computer Design, Alan B Marcovitz, McGraw-Hill Education, 2007.</li>
+					<li>Verilog HDL: A Guide to Digital Design and Synthesis, Samir Palnitkar, IEEE Press, 1st Edition, 2003.</li>
+					<li>This experiment is developed by Dr.&nbsp;Biswajith&nbsp;R.&nbsp;Bhowmik and his UG students: Nitin Chaudhary, Syed Abdul Gafoor, Vikas Keshavamurthy Bhat and Manojna K P<br />
+						Department of Computer Science and Engineering, National Institute of Technology Karnataka</p>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
+	</div>
+</body>
+</html>
