@@ -24,7 +24,7 @@ div.main {
 	padding: max(1vw, 1vh);
 	position: relative;
 }
-p.center {
+div.center {
 	padding: 1vw;
 	width: 100%;
 	text-align: center;
