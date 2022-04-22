@@ -1,3 +1,0 @@
-verilog isim_temp "dec_3x8.v"
-verilog isim_temp "dec_4x16_d_fault0.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

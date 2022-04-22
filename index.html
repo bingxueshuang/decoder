@@ -4,10 +4,53 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>HTML project report</title>
-	<script type="text/javascript">window.location.href = "Folder%20II/index.html"</script>
+	<title>Aim</title>
+	<link rel="stylesheet" href="ui/style.css" />
+	<script src="ui/script.js" defer></script>
 </head>
 <body>
-	<div>Redirecting to <a href="Folder%20II/index.html">index.html</a></div>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
+		<div class="nav">
+			<a href="index.html" class="active">Aim</a>
+			<a href="theory.html">Theory</a>
+			<a href="pre.html">Pretest</a>
+			<a href="proc.html">Procedure</a>
+			<a href="sim.html">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html">Reference</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
+				<ul>
+					<li class="active"><a href="index.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html">Pretest</a></li>
+					<li><a href="proc.html">Procedure</a></li>
+					<li><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li><a href="ref.html">Reference</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Sidebar removed -->
+		<div class="content">
+			<h2>Aim</h2>
+			<h3>Objective</h3>
+			<p>Detection of the Stuck-at-0 faults (SA0) on the 4x16 decoder constructed with two 3x8 decoders as shown in the image.</p>
+			<!--  i guess sir told to remove image ? shall we keep it ? otherwise it seems very empty -->
+			<p class="center"><img src="images/question.png" /></p>
+			<ul>
+				<li>To learn and understand the basic concepts of stuck-at-fault model.</li>
+				<li>To detect and analyse SA0 on 4x16 decoder constructed as shown.</li>
+				<li>To understand and analyse SA0 faults using the simulator.</li>
+			</ul>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
+	</div>
 </body>
 </html>

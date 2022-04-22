@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pretest</title>
+	<link rel="stylesheet" href="ui/style.css" />
+	<link rel="stylesheet" type="text/css" href="ui/test.css" />
+	<script src="ui/script.js" defer></script>
+	<script src="ui/test.js" type="text/javascript" defer></script>
+</head>
+<body>
+	<div class="top-bar">
+		<span class="button" onclick="modalOpen();"><img src="images/hamburger.svg" /></span>
+		<div class="nav">
+			<a href="index.html">Aim</a>
+			<a href="theory.html">Theory</a>
+			<a href="pre.html" class="active">Pretest</a>
+			<a href="proc.html">Procedure</a>
+			<a href="sim.html">Simulation</a>
+			<a href="post.html">Posttest</a>
+			<a href="ref.html">Reference</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="modal-backdrop"></div>
+		<div class="modal" onclick="">
+			<div class="nav">
+				<span onclick="modalClose();" class="close-btn">&times;</span>
+				<ul>
+					<li><a href="index.html">Aim</a></li>
+					<li><a href="theory.html">Theory</a></li>
+					<li><a href="pre.html" class="active">Pretest</a></li>
+					<li><a href="proc.html">Procedure</a></li>
+					<li><a href="sim.html">Simulation</a></li>
+					<li><a href="post.html">Posttest</a></li>
+					<li><a href="ref.html">Reference</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Sidebar removed -->
+		<div class="content">
+			<h2>Pretest</h2>
+			<div class="quiz">
+				<ul>
+					<p>Question - 1<br />Stuck at fault are of how many types</p>
+					<li><label><input type="radio" name="q1" class="ans" />2</label></li>
+					<li><label><input type="radio" name="q1" />3</label></li>
+					<li><label><input type="radio" name="q1" />1</label></li>
+					<li><label><input type="radio" name="q1" />4</label></li>
+				</ul>
+				<ul>
+					<p>Question - 2<br />SA0 fault detection model is used to </p>
+					<li><label><input type="radio" name="q2" />Predict the scenario in case a fault is found in circuit</label></li>
+					<li><label><input type="radio" name="q2" />Identify errors that can occur due to SA0 at different locations.</label></li>
+					<li><label><input type="radio" name="q2" />Predict reasons of fault.</label></li>
+					<li><label><input type="radio" name="q2" class="ans" />All of the above</label></li>
+				</ul>
+				<ul>
+					<p>Question - 3<br />IC chip used for implementation of 3x8 line-decoder</p>
+					<li><label><input type="radio" name="q3" />IC 74HC200</label></li>
+					<li><label><input type="radio" name="q3" class="ans" />IC 74HC238</label></li>
+					<li><label><input type="radio" name="q3" />IC 74HR238</label></li>
+					<li><label><input type="radio" name="q3" />IC 74HA228</label></li>
+				</ul>
+				<ul>
+					<p>Question - 4<br />The 4x16 line-decoder implemented using two 3x8 line-decoders has enable as</p>
+					<li><label><input type="radio" name="q4" class="ans" />one of the inputs</label></li>
+					<li><label><input type="radio" name="q4" />one of the outputs</label></li>
+					<li><label><input type="radio" name="q4" />xor of two inputs</label></li>
+					<li><label><input type="radio" name="q4" />xnor of two inputs</label></li>
+				</ul>
+				<ul>
+					<p>Question - 5<br />By considering Stuck-at-0 fault (line always passes signal 0) at different locations, all the SA0 fault cases can be identified</p>
+					<li><label><input type="radio" name="q5" class="ans" />True</label></li>
+					<li><label><input type="radio" name="q5" />False</label></li>
+				</ul>
+				<button class="primary" onclick="validate();">Submit</button>
+				<div id="output"></div>
+			</div>
+		</div>
+		<div onclick="window.scrollTo(0,0);" class="scrollTop"><img src="images/top.svg" /></div>
+	</div>
+</body>
+</html>
